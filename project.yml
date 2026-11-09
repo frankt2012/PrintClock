@@ -1,4 +1,4 @@
-name: TimeCalculator
+name: PrintClock
 
 options:
   bundleIdPrefix: com.franktriolo
@@ -21,24 +21,24 @@ settings:
     DEAD_CODE_STRIPPING: YES
 
 packages:
-  TimeCalculatorKit:
-    path: Packages/TimeCalculatorKit
+  PrintClockKit:
+    path: Packages/PrintClockKit
 
 targets:
-  TimeCalculator:
+  PrintClock:
     type: application
     platform: macOS
     sources:
-      - path: TimeCalculator
+      - path: PrintClock
     dependencies:
-      - package: TimeCalculatorKit
+      - package: PrintClockKit
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.franktriolo.timecalculator
-        PRODUCT_NAME: Time Calculator
-        PRODUCT_MODULE_NAME: TimeCalculator
-        INFOPLIST_FILE: TimeCalculator/Info.plist
-        CODE_SIGN_ENTITLEMENTS: TimeCalculator/TimeCalculator.entitlements
+        PRODUCT_BUNDLE_IDENTIFIER: com.franktriolo.printclock
+        PRODUCT_NAME: PrintClock
+        PRODUCT_MODULE_NAME: PrintClock
+        INFOPLIST_FILE: PrintClock/Info.plist
+        CODE_SIGN_ENTITLEMENTS: PrintClock/PrintClock.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         COMBINE_HIDPI_IMAGES: YES
@@ -47,29 +47,29 @@ targets:
           - "$(inherited)"
           - "@executable_path/../Frameworks"
 
-  TimeCalculatorKitTests:
+  PrintClockKitTests:
     type: bundle.unit-test
     platform: macOS
     sources:
-      - path: Packages/TimeCalculatorKit/Tests/TimeCalculatorKitTests
+      - path: Packages/PrintClockKit/Tests/PrintClockKitTests
     dependencies:
-      - package: TimeCalculatorKit
+      - package: PrintClockKit
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.franktriolo.timecalculator.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.franktriolo.printclock.tests
         GENERATE_INFOPLIST_FILE: YES
 
 schemes:
-  TimeCalculator:
+  PrintClock:
     build:
       targets:
-        TimeCalculator: all
+        PrintClock: all
     run:
       config: Debug
     test:
       config: Debug
       targets:
-        - TimeCalculatorKitTests
+        - PrintClockKitTests
     profile:
       config: Release
     analyze:

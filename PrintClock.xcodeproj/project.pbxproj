@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C10B51446F520E532B11240 /* UpdateCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307FCC3A65A2E2F7E65F79DE /* UpdateCheckerTests.swift */; };
+		2C2D10BBD2DCCD0350F4794D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AE8C35A5CC91523D94F9AE /* ContentView.swift */; };
+		2FE93E32B66F783672B05DD5 /* PrintClockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A055F1AE7944445D40EE4D0 /* PrintClockKit */; };
+		38464BF8A8A8EA088C0C9885 /* PrintTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED18EB84A14BC09D4C746A /* PrintTimeTests.swift */; };
+		57C9699AD688C063E7868CAD /* PrintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C504B329EF46151BFB77B /* PrintModel.swift */; };
+		75792C49CCBFE427F39023F5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953624AF52EFE528A6F0FDD /* Notifications.swift */; };
+		79C406C6E906C54DD3F0C04A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84EB9A610E273E6531A013 /* SettingsView.swift */; };
+		88B9A49C0B89A886CCC5CCF7 /* DurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41E7CFC1375A284C5B954D6 /* DurationField.swift */; };
+		9B7A838E89980D0E9F1A1BE4 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B3DD80B33E240AAE2E1FAE /* MenuBarView.swift */; };
+		CA6D9F80FF5A601A3EC1C96D /* PrintClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D699FEEA00175E1D9076679F /* PrintClockApp.swift */; };
+		E174AB85F85C7A531C37FA94 /* PrintClockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 286827C99FC4D57F79F5780F /* PrintClockKit */; };
+		EDA26E788147A4292214EBD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9CA2F3CA90A8FBA2DFBE719 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11E39951D37B0968AD35233D /* PrintClockKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrintClockKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		12556247A664D98362550ED8 /* PrintClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18ED18EB84A14BC09D4C746A /* PrintTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTimeTests.swift; sourceTree = "<group>"; };
+		307FCC3A65A2E2F7E65F79DE /* UpdateCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheckerTests.swift; sourceTree = "<group>"; };
+		59AE8C35A5CC91523D94F9AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		69F0245D2BB668E738E7B68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		95B608F7781E0F5BAD733DCF /* PrintClockKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PrintClockKit; path = Packages/PrintClockKit; sourceTree = SOURCE_ROOT; };
+		9953624AF52EFE528A6F0FDD /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		A41E7CFC1375A284C5B954D6 /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
+		A9CA2F3CA90A8FBA2DFBE719 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA1C504B329EF46151BFB77B /* PrintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintModel.swift; sourceTree = "<group>"; };
+		C4B3DD80B33E240AAE2E1FAE /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		CF84EB9A610E273E6531A013 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D03ADA7B90E7127D5040F4F1 /* PrintClock.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PrintClock.entitlements; sourceTree = "<group>"; };
+		D699FEEA00175E1D9076679F /* PrintClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintClockApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90B587D52583FDE141C58AF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FE93E32B66F783672B05DD5 /* PrintClockKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6EFE0E26635928A8F17713D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E174AB85F85C7A531C37FA94 /* PrintClockKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11D6C5684058E0ABE54885D1 /* PrintClockKit */ = {
+			isa = PBXGroup;
+			children = (
+				CDDE63BB51B969D3D1D64353 /* Tests */,
+			);
+			path = PrintClockKit;
+			sourceTree = "<group>";
+		};
+		31ADF47BFCEABE2B90FF84E2 /* PrintClock */ = {
+			isa = PBXGroup;
+			children = (
+				A9CA2F3CA90A8FBA2DFBE719 /* Assets.xcassets */,
+				59AE8C35A5CC91523D94F9AE /* ContentView.swift */,
+				A41E7CFC1375A284C5B954D6 /* DurationField.swift */,
+				69F0245D2BB668E738E7B68B /* Info.plist */,
+				C4B3DD80B33E240AAE2E1FAE /* MenuBarView.swift */,
+				9953624AF52EFE528A6F0FDD /* Notifications.swift */,
+				D03ADA7B90E7127D5040F4F1 /* PrintClock.entitlements */,
+				D699FEEA00175E1D9076679F /* PrintClockApp.swift */,
+				AA1C504B329EF46151BFB77B /* PrintModel.swift */,
+				CF84EB9A610E273E6531A013 /* SettingsView.swift */,
+			);
+			path = PrintClock;
+			sourceTree = "<group>";
+		};
+		89BEFCC1858A55285404B5CF /* PrintClockKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				18ED18EB84A14BC09D4C746A /* PrintTimeTests.swift */,
+				307FCC3A65A2E2F7E65F79DE /* UpdateCheckerTests.swift */,
+			);
+			path = PrintClockKitTests;
+			sourceTree = "<group>";
+		};
+		B38D87201ED2F6A3E14A5560 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				11D6C5684058E0ABE54885D1 /* PrintClockKit */,
+				95B608F7781E0F5BAD733DCF /* PrintClockKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		CDDE63BB51B969D3D1D64353 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				89BEFCC1858A55285404B5CF /* PrintClockKitTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D355349B1B59E1189C449092 = {
+			isa = PBXGroup;
+			children = (
+				B38D87201ED2F6A3E14A5560 /* Packages */,
+				31ADF47BFCEABE2B90FF84E2 /* PrintClock */,
+				EDD16201D13842E134D9DBEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDD16201D13842E134D9DBEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				12556247A664D98362550ED8 /* PrintClock.app */,
+				11E39951D37B0968AD35233D /* PrintClockKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4520C02DCE67E06FB7C4130F /* PrintClockKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E9E51143A5F214439B90BF /* Build configuration list for PBXNativeTarget "PrintClockKitTests" */;
+			buildPhases = (
+				2B0E71405B01AD94246A435F /* Sources */,
+				A6EFE0E26635928A8F17713D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrintClockKitTests;
+			packageProductDependencies = (
+				286827C99FC4D57F79F5780F /* PrintClockKit */,
+			);
+			productName = PrintClockKitTests;
+			productReference = 11E39951D37B0968AD35233D /* PrintClockKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D4A78851B8CEA1746A61FC6 /* PrintClock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CEE35C10EF6B726D5A070AC /* Build configuration list for PBXNativeTarget "PrintClock" */;
+			buildPhases = (
+				FCCE38F852562E46AA147850 /* Sources */,
+				AA9E058016AEC6991825703A /* Resources */,
+				90B587D52583FDE141C58AF0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrintClock;
+			packageProductDependencies = (
+				9A055F1AE7944445D40EE4D0 /* PrintClockKit */,
+			);
+			productName = PrintClock;
+			productReference = 12556247A664D98362550ED8 /* PrintClock.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1719A65A0F6C249F76CAE3B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					4520C02DCE67E06FB7C4130F = {
+						DevelopmentTeam = BJB8XCZ8X9;
+						ProvisioningStyle = Automatic;
+					};
+					9D4A78851B8CEA1746A61FC6 = {
+						DevelopmentTeam = BJB8XCZ8X9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 56961DD148F791623E63F30A /* Build configuration list for PBXProject "PrintClock" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = D355349B1B59E1189C449092;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				03665AB4B2B16FE1301F0DB3 /* XCLocalSwiftPackageReference "Packages/PrintClockKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EDD16201D13842E134D9DBEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D4A78851B8CEA1746A61FC6 /* PrintClock */,
+				4520C02DCE67E06FB7C4130F /* PrintClockKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA9E058016AEC6991825703A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA26E788147A4292214EBD6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B0E71405B01AD94246A435F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38464BF8A8A8EA088C0C9885 /* PrintTimeTests.swift in Sources */,
+				2C10B51446F520E532B11240 /* UpdateCheckerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCCE38F852562E46AA147850 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2D10BBD2DCCD0350F4794D /* ContentView.swift in Sources */,
+				88B9A49C0B89A886CCC5CCF7 /* DurationField.swift in Sources */,
+				9B7A838E89980D0E9F1A1BE4 /* MenuBarView.swift in Sources */,
+				75792C49CCBFE427F39023F5 /* Notifications.swift in Sources */,
+				CA6D9F80FF5A601A3EC1C96D /* PrintClockApp.swift in Sources */,
+				57C9699AD688C063E7868CAD /* PrintModel.swift in Sources */,
+				79C406C6E906C54DD3F0C04A /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		287CF85516C9E5D0B2BE0BDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PrintClock/PrintClock.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PrintClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.printclock;
+				PRODUCT_MODULE_NAME = PrintClock;
+				PRODUCT_NAME = PrintClock;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		663F65F1AB04B1E3ED3FF0C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BJB8XCZ8X9;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		7534BAA015791643829B27D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PrintClock/PrintClock.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = PrintClock/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.printclock;
+				PRODUCT_MODULE_NAME = PrintClock;
+				PRODUCT_NAME = PrintClock;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		827249053CD792222854AA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.printclock.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		96D806A1F899C96DC50B2715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.printclock.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D04F31C942B101E30B5E9518 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BJB8XCZ8X9;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		56961DD148F791623E63F30A /* Build configuration list for PBXProject "PrintClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D04F31C942B101E30B5E9518 /* Debug */,
+				663F65F1AB04B1E3ED3FF0C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		67E9E51143A5F214439B90BF /* Build configuration list for PBXNativeTarget "PrintClockKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				827249053CD792222854AA2C /* Debug */,
+				96D806A1F899C96DC50B2715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6CEE35C10EF6B726D5A070AC /* Build configuration list for PBXNativeTarget "PrintClock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287CF85516C9E5D0B2BE0BDE /* Debug */,
+				7534BAA015791643829B27D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		03665AB4B2B16FE1301F0DB3 /* XCLocalSwiftPackageReference "Packages/PrintClockKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/PrintClockKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		286827C99FC4D57F79F5780F /* PrintClockKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PrintClockKit;
+		};
+		9A055F1AE7944445D40EE4D0 /* PrintClockKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PrintClockKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1719A65A0F6C249F76CAE3B5 /* Project object */;
+}

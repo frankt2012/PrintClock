@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "30D9A53133A2D3970E433857"
-               BuildableName = "TimeCalculator.app"
-               BlueprintName = "TimeCalculator"
-               ReferencedContainer = "container:TimeCalculator.xcodeproj">
+               BlueprintIdentifier = "9D4A78851B8CEA1746A61FC6"
+               BuildableName = "PrintClock.app"
+               BlueprintName = "PrintClock"
+               ReferencedContainer = "container:PrintClock.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30D9A53133A2D3970E433857"
-            BuildableName = "TimeCalculator.app"
-            BlueprintName = "TimeCalculator"
-            ReferencedContainer = "container:TimeCalculator.xcodeproj">
+            BlueprintIdentifier = "9D4A78851B8CEA1746A61FC6"
+            BuildableName = "PrintClock.app"
+            BlueprintName = "PrintClock"
+            ReferencedContainer = "container:PrintClock.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -44,10 +44,10 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2B3F7468DF2089D00C72661B"
-               BuildableName = "TimeCalculatorKitTests.xctest"
-               BlueprintName = "TimeCalculatorKitTests"
-               ReferencedContainer = "container:TimeCalculator.xcodeproj">
+               BlueprintIdentifier = "4520C02DCE67E06FB7C4130F"
+               BuildableName = "PrintClockKitTests.xctest"
+               BlueprintName = "PrintClockKitTests"
+               ReferencedContainer = "container:PrintClock.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -68,10 +68,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30D9A53133A2D3970E433857"
-            BuildableName = "TimeCalculator.app"
-            BlueprintName = "TimeCalculator"
-            ReferencedContainer = "container:TimeCalculator.xcodeproj">
+            BlueprintIdentifier = "9D4A78851B8CEA1746A61FC6"
+            BuildableName = "PrintClock.app"
+            BlueprintName = "PrintClock"
+            ReferencedContainer = "container:PrintClock.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
@@ -87,10 +87,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "30D9A53133A2D3970E433857"
-            BuildableName = "TimeCalculator.app"
-            BlueprintName = "TimeCalculator"
-            ReferencedContainer = "container:TimeCalculator.xcodeproj">
+            BlueprintIdentifier = "9D4A78851B8CEA1746A61FC6"
+            BuildableName = "PrintClock.app"
+            BlueprintName = "PrintClock"
+            ReferencedContainer = "container:PrintClock.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>

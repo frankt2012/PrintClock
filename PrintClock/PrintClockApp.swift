@@ -1,11 +1,11 @@
 import SwiftUI
 
 @main
-struct TimeCalculatorApp: App {
+struct PrintClockApp: App {
     @StateObject private var model = PrintModel()
 
     var body: some Scene {
-        WindowGroup("Time Calculator", id: "main") {
+        WindowGroup("PrintClock", id: "main") {
             ContentView()
                 .environmentObject(model)
         }
@@ -17,9 +17,14 @@ struct TimeCalculatorApp: App {
                 .environmentObject(model)
         } label: {
             Image(systemName: "clock.badge.checkmark")
-                .accessibilityLabel("Time Calculator")
-                .help("Time Calculator")
+                .accessibilityLabel("PrintClock")
+                .help("PrintClock")
         }
         .menuBarExtraStyle(.window)
+
+        Settings {
+            SettingsView()
+                .environmentObject(model)
+        }
     }
 }

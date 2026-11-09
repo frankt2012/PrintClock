@@ -1,5 +1,5 @@
 import SwiftUI
-import TimeCalculatorKit
+import PrintClockKit
 
 struct ContentView: View {
     @EnvironmentObject private var model: PrintModel
@@ -64,7 +64,7 @@ struct ContentView: View {
             .shadow(color: Color.accentColor.opacity(0.24), radius: 8, y: 3)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text("Time Calculator")
+                Text("PrintClock")
                     .font(.title2.weight(.semibold))
                 Text("Know exactly when your 3D print finishes.")
                     .font(.callout)
@@ -72,6 +72,14 @@ struct ContentView: View {
             }
 
             Spacer(minLength: 0)
+
+            SettingsLink {
+                Label("Settings", systemImage: "gearshape")
+                    .labelStyle(.iconOnly)
+            }
+            .buttonStyle(.borderless)
+            .foregroundStyle(.secondary)
+            .help("Settings")
         }
     }
 

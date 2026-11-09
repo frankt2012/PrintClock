@@ -1,6 +1,6 @@
 import AppKit
 import SwiftUI
-import TimeCalculatorKit
+import PrintClockKit
 
 struct MenuBarView: View {
     @EnvironmentObject private var model: PrintModel
@@ -43,10 +43,18 @@ struct MenuBarView: View {
             }
             .frame(width: 26, height: 26)
 
-            Text("Time Calculator")
+            Text("PrintClock")
                 .font(.headline)
 
             Spacer()
+
+            SettingsLink {
+                Label("Settings", systemImage: "gearshape")
+                    .labelStyle(.iconOnly)
+            }
+            .buttonStyle(.borderless)
+            .foregroundStyle(.secondary)
+            .help("Settings")
 
             Button {
                 NSApp.terminate(nil)
@@ -55,7 +63,7 @@ struct MenuBarView: View {
             }
             .buttonStyle(.borderless)
             .foregroundStyle(.secondary)
-            .help("Quit Time Calculator")
+            .help("Quit PrintClock")
         }
     }
 

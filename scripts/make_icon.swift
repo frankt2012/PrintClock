@@ -8,7 +8,7 @@ import Foundation
 let arguments = CommandLine.arguments
 let outputDirectory = arguments.count > 1
     ? arguments[1]
-    : "TimeCalculator/Assets.xcassets/AppIcon.appiconset"
+    : "PrintClock/Assets.xcassets/AppIcon.appiconset"
 
 let canvas: CGFloat = 1024
 let colorSpace = CGColorSpaceCreateDeviceRGB()

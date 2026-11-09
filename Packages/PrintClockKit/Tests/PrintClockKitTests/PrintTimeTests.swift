@@ -1,5 +1,5 @@
 import XCTest
-@testable import TimeCalculatorKit
+@testable import PrintClockKit
 
 final class PrintTimeTests: XCTestCase {
     private let timeZone = TimeZone(identifier: "America/New_York")!
