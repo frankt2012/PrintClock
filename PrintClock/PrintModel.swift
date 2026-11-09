@@ -38,6 +38,7 @@ final class PrintModel: ObservableObject {
         static let anchor = "printAnchor"
         static let customStart = "printCustomStart"
         static let lastUpdateCheck = "lastUpdateCheck"
+        static let iconMode = IconMode.storageKey
     }
 
     @Published var hours: Int {
@@ -79,6 +80,13 @@ final class PrintModel: ObservableObject {
         }
     }
 
+    @Published var iconMode: IconMode {
+        didSet {
+            defaults.set(iconMode.rawValue, forKey: Keys.iconMode)
+            applyIconMode()
+        }
+    }
+
     @Published private(set) var availableUpdate: AvailableUpdate?
     @Published private(set) var isCheckingForUpdates = false
     @Published private(set) var updateCheckMessage: String?
@@ -95,6 +103,7 @@ final class PrintModel: ObservableObject {
         self.startMode = savedMode
         self.anchor = defaults.object(forKey: Keys.anchor) as? Date ?? .now
         self.customStart = defaults.object(forKey: Keys.customStart) as? Date ?? .now
+        self.iconMode = IconMode(rawValue: defaults.string(forKey: Keys.iconMode) ?? "") ?? .both
 
         let savedDuration = PrintTime.duration(hours: hours, minutes: minutes)
         let savedStart = savedMode == .now ? anchor : customStart
@@ -211,6 +220,13 @@ final class PrintModel: ObservableObject {
     private func reanchorIfNeeded() {
         if startMode == .now {
             anchor = .now
+        }
+    }
+
+    private func applyIconMode() {
+        let policy: NSApplication.ActivationPolicy = iconMode == .menuBarOnly ? .accessory : .regular
+        if NSApp.activationPolicy() != policy {
+            NSApp.setActivationPolicy(policy)
         }
     }
 

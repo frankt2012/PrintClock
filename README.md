@@ -19,6 +19,7 @@ Settings covers launch at login, finished-print notifications, and update checks
 - Finish time updates live, with a countdown and progress bar
 - Start now, or choose a custom start date and time
 - Menu bar extra for quick access, synced with the main window
+- Choose Dock and menu bar, menu bar only, or Dock only
 - Notification when the timer reaches zero, with a Test button
 - Launch at login
 - Automatic daily update check, plus a manual Check for Updates button

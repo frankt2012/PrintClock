@@ -14,6 +14,16 @@ struct SettingsView: View {
     var body: some View {
         Form {
             Section("General") {
+                Picker("Show icon in", selection: $model.iconMode) {
+                    ForEach(IconMode.allCases) { mode in
+                        Text(mode.title).tag(mode)
+                    }
+                }
+
+                Text("Menu bar only hides the Dock icon. Dock only removes the menu bar item.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
                 Toggle("Launch at login", isOn: Binding(
                     get: { launchAtLogin },
                     set: { setLaunchAtLogin($0) }
@@ -82,7 +92,7 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 460, height: 400)
+        .frame(width: 460, height: 470)
         .onAppear {
             launchAtLogin = SMAppService.mainApp.status == .enabled
         }

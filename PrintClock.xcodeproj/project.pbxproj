@@ -11,6 +11,8 @@
 		2C2D10BBD2DCCD0350F4794D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AE8C35A5CC91523D94F9AE /* ContentView.swift */; };
 		2FE93E32B66F783672B05DD5 /* PrintClockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9A055F1AE7944445D40EE4D0 /* PrintClockKit */; };
 		38464BF8A8A8EA088C0C9885 /* PrintTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ED18EB84A14BC09D4C746A /* PrintTimeTests.swift */; };
+		39187790F8D4AA11B0AE3967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7956F2005938F4751B1882EB /* AppDelegate.swift */; };
+		5054F6DA0304A19DC9AA4F1B /* IconMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E78CD6BA32D42C687891CF2 /* IconMode.swift */; };
 		57C9699AD688C063E7868CAD /* PrintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1C504B329EF46151BFB77B /* PrintModel.swift */; };
 		75792C49CCBFE427F39023F5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9953624AF52EFE528A6F0FDD /* Notifications.swift */; };
 		79C406C6E906C54DD3F0C04A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF84EB9A610E273E6531A013 /* SettingsView.swift */; };
@@ -26,8 +28,10 @@
 		12556247A664D98362550ED8 /* PrintClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrintClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18ED18EB84A14BC09D4C746A /* PrintTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTimeTests.swift; sourceTree = "<group>"; };
 		307FCC3A65A2E2F7E65F79DE /* UpdateCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCheckerTests.swift; sourceTree = "<group>"; };
+		3E78CD6BA32D42C687891CF2 /* IconMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconMode.swift; sourceTree = "<group>"; };
 		59AE8C35A5CC91523D94F9AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		69F0245D2BB668E738E7B68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7956F2005938F4751B1882EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95B608F7781E0F5BAD733DCF /* PrintClockKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = PrintClockKit; path = Packages/PrintClockKit; sourceTree = SOURCE_ROOT; };
 		9953624AF52EFE528A6F0FDD /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		A41E7CFC1375A284C5B954D6 /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
@@ -70,9 +74,11 @@
 		31ADF47BFCEABE2B90FF84E2 /* PrintClock */ = {
 			isa = PBXGroup;
 			children = (
+				7956F2005938F4751B1882EB /* AppDelegate.swift */,
 				A9CA2F3CA90A8FBA2DFBE719 /* Assets.xcassets */,
 				59AE8C35A5CC91523D94F9AE /* ContentView.swift */,
 				A41E7CFC1375A284C5B954D6 /* DurationField.swift */,
+				3E78CD6BA32D42C687891CF2 /* IconMode.swift */,
 				69F0245D2BB668E738E7B68B /* Info.plist */,
 				C4B3DD80B33E240AAE2E1FAE /* MenuBarView.swift */,
 				9953624AF52EFE528A6F0FDD /* Notifications.swift */,
@@ -237,8 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39187790F8D4AA11B0AE3967 /* AppDelegate.swift in Sources */,
 				2C2D10BBD2DCCD0350F4794D /* ContentView.swift in Sources */,
 				88B9A49C0B89A886CCC5CCF7 /* DurationField.swift in Sources */,
+				5054F6DA0304A19DC9AA4F1B /* IconMode.swift in Sources */,
 				9B7A838E89980D0E9F1A1BE4 /* MenuBarView.swift in Sources */,
 				75792C49CCBFE427F39023F5 /* Notifications.swift in Sources */,
 				CA6D9F80FF5A601A3EC1C96D /* PrintClockApp.swift in Sources */,
