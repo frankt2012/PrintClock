@@ -1,0 +1,78 @@
+name: TimeCalculator
+
+options:
+  bundleIdPrefix: com.franktriolo
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  xcodeVersion: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: BJB8XCZ8X9
+    ENABLE_HARDENED_RUNTIME: NO
+    SWIFT_STRICT_CONCURRENCY: minimal
+    DEAD_CODE_STRIPPING: YES
+
+packages:
+  TimeCalculatorKit:
+    path: Packages/TimeCalculatorKit
+
+targets:
+  TimeCalculator:
+    type: application
+    platform: macOS
+    sources:
+      - path: TimeCalculator
+    dependencies:
+      - package: TimeCalculatorKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.franktriolo.timecalculator
+        PRODUCT_NAME: Time Calculator
+        PRODUCT_MODULE_NAME: TimeCalculator
+        INFOPLIST_FILE: TimeCalculator/Info.plist
+        CODE_SIGN_ENTITLEMENTS: TimeCalculator/TimeCalculator.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        COMBINE_HIDPI_IMAGES: YES
+        ENABLE_PREVIEWS: YES
+        LD_RUNPATH_SEARCH_PATHS:
+          - "$(inherited)"
+          - "@executable_path/../Frameworks"
+
+  TimeCalculatorKitTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Packages/TimeCalculatorKit/Tests/TimeCalculatorKitTests
+    dependencies:
+      - package: TimeCalculatorKit
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.franktriolo.timecalculator.tests
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  TimeCalculator:
+    build:
+      targets:
+        TimeCalculator: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - TimeCalculatorKitTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

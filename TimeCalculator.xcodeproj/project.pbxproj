@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0182469168815BECF5E56798 /* TimeCalculatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98122AB22C887F30915EF15F /* TimeCalculatorKit */; };
+		16E82B9284EC3410D0D60DBE /* TimeCalculatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = F8C9D24D28641F5B823493A9 /* TimeCalculatorKit */; };
+		323F0A391BE2A1CCB9F5BEAB /* TimeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECFDF9D80D75EA602DF42E /* TimeCalculatorApp.swift */; };
+		422AC31417F0D09DA0A2669D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F411FCFD5006DEB264956 /* ContentView.swift */; };
+		C74644E46A9C66636BFD3235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BDA5BAA669442DD308C8C8 /* Assets.xcassets */; };
+		D076D6557FC42BFEC248FF48 /* PrintTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF5CCACD1505C65861213D6 /* PrintTimeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0FF5CCACD1505C65861213D6 /* PrintTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintTimeTests.swift; sourceTree = "<group>"; };
+		14E1A13E4C5EA49A8B04539E /* TimeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27248B37561A0338A1CFF24D /* TimeCalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeCalculator.entitlements; sourceTree = "<group>"; };
+		3D249478F64DFC3CCB3BE935 /* TimeCalculatorKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = TimeCalculatorKit; path = Packages/TimeCalculatorKit; sourceTree = SOURCE_ROOT; };
+		405F411FCFD5006DEB264956 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7741A6E28E6CFF0E55511179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9CECFDF9D80D75EA602DF42E /* TimeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorApp.swift; sourceTree = "<group>"; };
+		B9BDA5BAA669442DD308C8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0A56AF55FCEA7096C759426 /* TimeCalculatorKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeCalculatorKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4753D77BD0EE6F42EC45DCA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16E82B9284EC3410D0D60DBE /* TimeCalculatorKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59854EF12607486A5606D52F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0182469168815BECF5E56798 /* TimeCalculatorKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034E666C1710905FBDBAC081 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14E1A13E4C5EA49A8B04539E /* TimeCalculator.app */,
+				F0A56AF55FCEA7096C759426 /* TimeCalculatorKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42418C73DD7607404E566FA2 /* TimeCalculatorKit */ = {
+			isa = PBXGroup;
+			children = (
+				7FDF780497814A6DB62B4129 /* Tests */,
+			);
+			path = TimeCalculatorKit;
+			sourceTree = "<group>";
+		};
+		77D1E1A0F4658062EA1A3117 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				42418C73DD7607404E566FA2 /* TimeCalculatorKit */,
+				3D249478F64DFC3CCB3BE935 /* TimeCalculatorKit */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		7B8B3299D9A2244BF203273A /* TimeCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				B9BDA5BAA669442DD308C8C8 /* Assets.xcassets */,
+				405F411FCFD5006DEB264956 /* ContentView.swift */,
+				7741A6E28E6CFF0E55511179 /* Info.plist */,
+				27248B37561A0338A1CFF24D /* TimeCalculator.entitlements */,
+				9CECFDF9D80D75EA602DF42E /* TimeCalculatorApp.swift */,
+			);
+			path = TimeCalculator;
+			sourceTree = "<group>";
+		};
+		7D5DDCF6FB4A8ECAAABF4101 = {
+			isa = PBXGroup;
+			children = (
+				77D1E1A0F4658062EA1A3117 /* Packages */,
+				7B8B3299D9A2244BF203273A /* TimeCalculator */,
+				034E666C1710905FBDBAC081 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FDF780497814A6DB62B4129 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CD624CAEEBAEA8F5EE017416 /* TimeCalculatorKitTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CD624CAEEBAEA8F5EE017416 /* TimeCalculatorKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				0FF5CCACD1505C65861213D6 /* PrintTimeTests.swift */,
+			);
+			path = TimeCalculatorKitTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B3F7468DF2089D00C72661B /* TimeCalculatorKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69A24CE12A26E1DB8A2CC54F /* Build configuration list for PBXNativeTarget "TimeCalculatorKitTests" */;
+			buildPhases = (
+				E4E2127647A4641A31685AFA /* Sources */,
+				4753D77BD0EE6F42EC45DCA6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeCalculatorKitTests;
+			packageProductDependencies = (
+				F8C9D24D28641F5B823493A9 /* TimeCalculatorKit */,
+			);
+			productName = TimeCalculatorKitTests;
+			productReference = F0A56AF55FCEA7096C759426 /* TimeCalculatorKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30D9A53133A2D3970E433857 /* TimeCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7F2B18A0547D4243D8AE369 /* Build configuration list for PBXNativeTarget "TimeCalculator" */;
+			buildPhases = (
+				DBD3A546D3DB77B8FA7FD51B /* Sources */,
+				9528C3C372F68AD4E9AF66C5 /* Resources */,
+				59854EF12607486A5606D52F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeCalculator;
+			packageProductDependencies = (
+				98122AB22C887F30915EF15F /* TimeCalculatorKit */,
+			);
+			productName = TimeCalculator;
+			productReference = 14E1A13E4C5EA49A8B04539E /* TimeCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67098023F2D233E2DFF628D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					2B3F7468DF2089D00C72661B = {
+						DevelopmentTeam = BJB8XCZ8X9;
+						ProvisioningStyle = Automatic;
+					};
+					30D9A53133A2D3970E433857 = {
+						DevelopmentTeam = BJB8XCZ8X9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5733B9A9A3238346056B0F0A /* Build configuration list for PBXProject "TimeCalculator" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7D5DDCF6FB4A8ECAAABF4101;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C6117CC4F1E36D2E25A3611E /* XCLocalSwiftPackageReference "Packages/TimeCalculatorKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 034E666C1710905FBDBAC081 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30D9A53133A2D3970E433857 /* TimeCalculator */,
+				2B3F7468DF2089D00C72661B /* TimeCalculatorKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9528C3C372F68AD4E9AF66C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C74644E46A9C66636BFD3235 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBD3A546D3DB77B8FA7FD51B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				422AC31417F0D09DA0A2669D /* ContentView.swift in Sources */,
+				323F0A391BE2A1CCB9F5BEAB /* TimeCalculatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4E2127647A4641A31685AFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D076D6557FC42BFEC248FF48 /* PrintTimeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0107FC342ADC24E58B20A67B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeCalculator/TimeCalculator.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TimeCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.timecalculator;
+				PRODUCT_MODULE_NAME = TimeCalculator;
+				PRODUCT_NAME = "Time Calculator";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		22C541F487A79C591D08F86F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeCalculator/TimeCalculator.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TimeCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.timecalculator;
+				PRODUCT_MODULE_NAME = TimeCalculator;
+				PRODUCT_NAME = "Time Calculator";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		2F5500CF03C0827D960102F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.timecalculator.tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8B951508A363BD30C57D03AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.franktriolo.timecalculator.tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C2CDC6A24BBCF32C0199C364 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BJB8XCZ8X9;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		C4DD2C3C0486FE290AB22957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BJB8XCZ8X9;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5733B9A9A3238346056B0F0A /* Build configuration list for PBXProject "TimeCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2CDC6A24BBCF32C0199C364 /* Debug */,
+				C4DD2C3C0486FE290AB22957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		69A24CE12A26E1DB8A2CC54F /* Build configuration list for PBXNativeTarget "TimeCalculatorKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B951508A363BD30C57D03AA /* Debug */,
+				2F5500CF03C0827D960102F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B7F2B18A0547D4243D8AE369 /* Build configuration list for PBXNativeTarget "TimeCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22C541F487A79C591D08F86F /* Debug */,
+				0107FC342ADC24E58B20A67B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C6117CC4F1E36D2E25A3611E /* XCLocalSwiftPackageReference "Packages/TimeCalculatorKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/TimeCalculatorKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		98122AB22C887F30915EF15F /* TimeCalculatorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeCalculatorKit;
+		};
+		F8C9D24D28641F5B823493A9 /* TimeCalculatorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TimeCalculatorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 67098023F2D233E2DFF628D8 /* Project object */;
+}
