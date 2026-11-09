@@ -61,6 +61,17 @@ PrintClock requires macOS 14 Sonoma or later. DMG installs are not notarized,
 so on first launch right-click the app in Applications and choose **Open**. The
 Homebrew cask removes the download quarantine for you.
 
+## Android
+
+There is an early native Android version in [android/](android/), built with
+Kotlin and Jetpack Compose. It includes the finish-time calculator, quick
+presets, a persistent active timer, and a local finish notification.
+
+![PrintClock on Android](docs/android.png)
+
+See [android/README.md](android/README.md) for build instructions and the
+current feature list.
+
 ## Build
 
 The project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen).
