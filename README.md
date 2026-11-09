@@ -83,3 +83,7 @@ The built app appears in Xcode's DerivedData folder, or use **Product → Show B
 ```sh
 swift test --package-path Packages/PrintClockKit
 ```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
