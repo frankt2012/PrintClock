@@ -13,6 +13,8 @@ import androidx.core.content.ContextCompat
 
 class PrintAlarmReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
+        PrintWidgetUpdater.update(context)
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
             ContextCompat.checkSelfPermission(
                 context,

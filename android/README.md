@@ -11,16 +11,23 @@ will finish.
 - Duration entry with quick presets
 - Live finish time, day, countdown, and progress
 - Active timer survives an app restart
+- Home-screen widget with a native live countdown
 - Local notification scheduled for the finish time
 - Exact alarms when the system allows them
+- Boot-time rescheduling so the alarm and widget survive a restart
 - Dark Material 3 UI using the same artwork as the macOS app
+
+![PrintClock home-screen widget](../docs/android-widget.png)
+
+Add the widget by long-pressing the home screen, choosing **Widgets**, then
+selecting **PrintClock**.
 
 ## Not here yet
 
 This is the first Android milestone. Still to come:
 
 - Custom start date and time
-- Home-screen widget
+- Quick Settings tile
 - Optional finish notification toggle
 - In-app update check
 - Release signing and a published APK

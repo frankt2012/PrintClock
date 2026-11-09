@@ -1,7 +1,6 @@
 package com.franktriolo.printclock
 
 import android.app.Application
-import android.content.Context
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
@@ -10,16 +9,13 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 
 class PrintClockViewModel(application: Application) : AndroidViewModel(application) {
-    private val prefs =
-        application.getSharedPreferences("printclock_state", Context.MODE_PRIVATE)
-
-    var hours by mutableIntStateOf(prefs.getInt(KEY_HOURS, 0))
+    var hours by mutableIntStateOf(0)
         private set
 
-    var minutes by mutableIntStateOf(prefs.getInt(KEY_MINUTES, 0))
+    var minutes by mutableIntStateOf(0)
         private set
 
-    var startMillis by mutableLongStateOf(prefs.getLong(KEY_START, System.currentTimeMillis()))
+    var startMillis by mutableLongStateOf(System.currentTimeMillis())
         private set
 
     var active by mutableStateOf(false)
@@ -39,24 +35,28 @@ class PrintClockViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     private fun restore() {
+        val app = getApplication<Application>()
+        val saved = PrintStateStore.read(app)
         val now = System.currentTimeMillis()
-        val savedStart = prefs.getLong(KEY_START, now)
-        val savedFinish = savedStart + durationMillis
 
-        if (durationMillis > 0 && savedFinish > now) {
-            startMillis = savedStart
+        hours = saved.hours
+        minutes = saved.minutes
+        startMillis = saved.startMillis
+
+        if (saved.isActive(now)) {
             active = true
-            PrintAlarmScheduler.schedule(getApplication(), savedFinish)
-            return
+            PrintAlarmScheduler.schedule(app, saved.finishMillis)
+        } else {
+            // A finished or stale timer should not silently start a new notification.
+            hours = 0
+            minutes = 0
+            startMillis = now
+            active = false
+            persist()
+            PrintAlarmScheduler.cancel(app)
         }
 
-        // A finished or stale timer should not silently start a new notification.
-        hours = 0
-        minutes = 0
-        startMillis = now
-        active = false
-        persist()
-        PrintAlarmScheduler.cancel(getApplication())
+        PrintWidgetUpdater.update(app)
     }
 
     fun updateHours(value: Int) {
@@ -88,24 +88,19 @@ class PrintClockViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     private fun persist() {
-        prefs.edit()
-            .putInt(KEY_HOURS, hours)
-            .putInt(KEY_MINUTES, minutes)
-            .putLong(KEY_START, startMillis)
-            .apply()
+        PrintStateStore.write(
+            getApplication(),
+            PrintState(hours = hours, minutes = minutes, startMillis = startMillis)
+        )
     }
 
     private fun updateAlarm() {
+        val app = getApplication<Application>()
         if (active && hasDuration) {
-            PrintAlarmScheduler.schedule(getApplication(), finishMillis)
+            PrintAlarmScheduler.schedule(app, finishMillis)
         } else {
-            PrintAlarmScheduler.cancel(getApplication())
+            PrintAlarmScheduler.cancel(app)
         }
-    }
-
-    private companion object {
-        const val KEY_HOURS = "printHours"
-        const val KEY_MINUTES = "printMinutes"
-        const val KEY_START = "printStart"
+        PrintWidgetUpdater.update(app)
     }
 }

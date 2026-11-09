@@ -65,7 +65,8 @@ Homebrew cask removes the download quarantine for you.
 
 There is an early native Android version in [android/](android/), built with
 Kotlin and Jetpack Compose. It includes the finish-time calculator, quick
-presets, a persistent active timer, and a local finish notification.
+presets, a persistent active timer, a home-screen widget with a live countdown,
+and a local finish notification.
 
 ![PrintClock on Android](docs/android.png)
 

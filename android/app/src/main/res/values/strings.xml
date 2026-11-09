@@ -5,4 +5,5 @@
     <string name="notification_channel_description">Alerts when a print timer reaches zero</string>
     <string name="notification_title">Print finished</string>
     <string name="notification_text">Your print should be finished now.</string>
+    <string name="widget_description">Print finish time and live countdown</string>
 </resources>
