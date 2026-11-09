@@ -3,6 +3,8 @@
 A small native macOS app for 3D printing: enter the print time reported by your
 slicer and see exactly what time the print will finish.
 
+![Time Calculator screenshot](docs/screenshot.png)
+
 ## Features
 
 - Enter print time in hours and minutes, with quick presets
