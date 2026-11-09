@@ -1,53 +1,20 @@
-import AppKit
 import SwiftUI
 import TimeCalculatorKit
 
 struct ContentView: View {
-    private enum StartMode: String, CaseIterable, Identifiable {
-        case now = "Now"
-        case custom = "Custom"
-
-        var id: String { rawValue }
-    }
-
-    private struct QuickDuration: Identifiable {
-        let label: String
-        let hours: Int
-        let minutes: Int
-
-        var id: String { label }
-    }
-
-    private static let quickDurations: [QuickDuration] = [
-        QuickDuration(label: "30m", hours: 0, minutes: 30),
-        QuickDuration(label: "1h", hours: 1, minutes: 0),
-        QuickDuration(label: "2h", hours: 2, minutes: 0),
-        QuickDuration(label: "4h", hours: 4, minutes: 0),
-        QuickDuration(label: "8h", hours: 8, minutes: 0)
-    ]
-
-    @AppStorage("printHours") private var hours = 0
-    @AppStorage("printMinutes") private var minutes = 0
-
-    @State private var startMode: StartMode = .now
-    @State private var anchor = Date.now
-    @State private var customStart = Date.now
+    @EnvironmentObject private var model: PrintModel
     @State private var copied = false
 
     private var start: Date {
-        startMode == .now ? anchor : customStart
-    }
-
-    private var duration: TimeInterval {
-        PrintTime.duration(hours: hours, minutes: minutes)
+        model.start
     }
 
     private var hasDuration: Bool {
-        duration > 0
+        model.hasDuration
     }
 
     private var finish: Date {
-        start.addingTimeInterval(duration)
+        model.finish
     }
 
     var body: some View {
@@ -69,17 +36,6 @@ struct ContentView: View {
                 endPoint: .bottom
             )
             .ignoresSafeArea()
-        }
-        .onChange(of: hours) { _, _ in
-            reanchorIfNeeded()
-        }
-        .onChange(of: minutes) { _, _ in
-            reanchorIfNeeded()
-        }
-        .onChange(of: startMode) { _, newMode in
-            if newMode == .now {
-                anchor = .now
-            }
         }
     }
 
@@ -129,14 +85,18 @@ struct ContentView: View {
 
                 Spacer()
 
-                Text(hasDuration ? PrintTime.durationText(hours: hours, minutes: minutes) : "From your slicer")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                Text(
+                    hasDuration
+                        ? PrintTime.durationText(hours: model.hours, minutes: model.minutes)
+                        : "From your slicer"
+                )
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
             }
 
             HStack(alignment: .top, spacing: 12) {
-                DurationField(caption: "Hours", suffix: "h", value: $hours, range: 0...999)
-                DurationField(caption: "Minutes", suffix: "m", value: $minutes, range: 0...59)
+                DurationField(caption: "Hours", suffix: "h", value: $model.hours, range: 0...999)
+                DurationField(caption: "Minutes", suffix: "m", value: $model.minutes, range: 0...59)
                 Spacer(minLength: 0)
             }
 
@@ -145,10 +105,9 @@ struct ContentView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
-                ForEach(Self.quickDurations) { quick in
+                ForEach(QuickDuration.presets) { quick in
                     Button(quick.label) {
-                        hours = quick.hours
-                        minutes = quick.minutes
+                        model.setDuration(hours: quick.hours, minutes: quick.minutes)
                     }
                     .buttonStyle(.bordered)
                     .buttonBorderShape(.capsule)
@@ -160,8 +119,7 @@ struct ContentView: View {
 
                 if hasDuration {
                     Button("Clear") {
-                        hours = 0
-                        minutes = 0
+                        model.setDuration(hours: 0, minutes: 0)
                     }
                     .buttonStyle(.borderless)
                     .controlSize(.small)
@@ -182,7 +140,7 @@ struct ContentView: View {
 
                 Spacer()
 
-                Picker("Start", selection: $startMode) {
+                Picker("Start", selection: $model.startMode) {
                     ForEach(StartMode.allCases) { mode in
                         Text(mode.rawValue).tag(mode)
                     }
@@ -192,17 +150,17 @@ struct ContentView: View {
                 .frame(width: 164)
             }
 
-            if startMode == .now {
+            if model.startMode == .now {
                 HStack(spacing: 8) {
                     Image(systemName: "clock")
                         .foregroundStyle(.secondary)
 
-                    Text("Started at \(PrintTime.clockText(for: anchor))")
+                    Text("Started at \(PrintTime.clockText(for: model.anchor))")
 
                     Spacer()
 
                     Button("Reset to Now") {
-                        anchor = .now
+                        model.resetToNow()
                     }
                     .buttonStyle(.borderless)
                     .controlSize(.small)
@@ -218,7 +176,7 @@ struct ContentView: View {
 
                     DatePicker(
                         "Start time",
-                        selection: $customStart,
+                        selection: $model.customStart,
                         displayedComponents: [.date, .hourAndMinute]
                     )
                     .datePickerStyle(.field)
@@ -289,7 +247,7 @@ struct ContentView: View {
                         Text(PrintTime.dayText(for: finish, relativeTo: now))
                         Text("·")
                             .foregroundStyle(.tertiary)
-                        Text("\(PrintTime.durationText(hours: hours, minutes: minutes)) print")
+                        Text("\(PrintTime.durationText(hours: model.hours, minutes: model.minutes)) print")
                     } else {
                         Text("Enter your print time above to get started.")
                     }
@@ -340,26 +298,8 @@ struct ContentView: View {
 
     // MARK: - Actions
 
-    private func reanchorIfNeeded() {
-        if startMode == .now {
-            anchor = .now
-        }
-    }
-
     private func copyFinishTime() {
-        let text = finish.formatted(
-            .dateTime
-                .weekday(.wide)
-                .month(.wide)
-                .day()
-                .year()
-                .hour()
-                .minute()
-        )
-
-        let pasteboard = NSPasteboard.general
-        pasteboard.clearContents()
-        pasteboard.setString(text, forType: .string)
+        model.copyFinishTime()
 
         withAnimation(.easeOut(duration: 0.15)) {
             copied = true
@@ -368,61 +308,6 @@ struct ContentView: View {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.6) {
             withAnimation(.easeOut(duration: 0.2)) {
                 copied = false
-            }
-        }
-    }
-}
-
-// MARK: - Duration field
-
-private struct DurationField: View {
-    let caption: String
-    let suffix: String
-    @Binding var value: Int
-    let range: ClosedRange<Int>
-
-    @FocusState private var isFocused: Bool
-
-    var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            HStack(alignment: .firstTextBaseline, spacing: 3) {
-                TextField("0", value: $value, format: .number.grouping(.never))
-                    .textFieldStyle(.plain)
-                    .font(.system(size: 40, weight: .semibold, design: .rounded))
-                    .monospacedDigit()
-                    .multilineTextAlignment(.trailing)
-                    .frame(width: 86)
-                    .focused($isFocused)
-                    .accessibilityLabel(caption)
-
-                Text(suffix)
-                    .font(.system(size: 21, weight: .medium, design: .rounded))
-                    .foregroundStyle(.secondary)
-            }
-            .padding(.horizontal, 14)
-            .frame(height: 62)
-            .background {
-                RoundedRectangle(cornerRadius: 13, style: .continuous)
-                    .fill(Color.primary.opacity(isFocused ? 0.09 : 0.06))
-            }
-            .overlay {
-                RoundedRectangle(cornerRadius: 13, style: .continuous)
-                    .strokeBorder(
-                        isFocused ? Color.accentColor.opacity(0.75) : Color.primary.opacity(0.08),
-                        lineWidth: isFocused ? 1.5 : 1
-                    )
-            }
-            .animation(.easeOut(duration: 0.15), value: isFocused)
-
-            Text(caption)
-                .font(.caption)
-                .foregroundStyle(.secondary)
-                .padding(.leading, 5)
-        }
-        .onChange(of: value) { _, newValue in
-            let clamped = min(max(newValue, range.lowerBound), range.upperBound)
-            if clamped != newValue {
-                value = clamped
             }
         }
     }
@@ -453,4 +338,5 @@ private extension View {
 
 #Preview {
     ContentView()
+        .environmentObject(PrintModel())
 }

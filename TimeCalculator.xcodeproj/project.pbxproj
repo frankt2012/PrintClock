@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		0182469168815BECF5E56798 /* TimeCalculatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 98122AB22C887F30915EF15F /* TimeCalculatorKit */; };
 		16E82B9284EC3410D0D60DBE /* TimeCalculatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = F8C9D24D28641F5B823493A9 /* TimeCalculatorKit */; };
+		175E28B3214E75B535C7592F /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D273CF4487C605A8DA8E3861 /* MenuBarView.swift */; };
 		323F0A391BE2A1CCB9F5BEAB /* TimeCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECFDF9D80D75EA602DF42E /* TimeCalculatorApp.swift */; };
+		39A6EF82F9207F74F1FD3D8A /* DurationField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62090A62B0EF4EE4CAB48DF /* DurationField.swift */; };
 		422AC31417F0D09DA0A2669D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405F411FCFD5006DEB264956 /* ContentView.swift */; };
 		C74644E46A9C66636BFD3235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9BDA5BAA669442DD308C8C8 /* Assets.xcassets */; };
 		D076D6557FC42BFEC248FF48 /* PrintTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF5CCACD1505C65861213D6 /* PrintTimeTests.swift */; };
+		FADF9FEE2C3BF7AD74006BCE /* PrintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71B7AE6915BB5FDA39D102C /* PrintModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		7741A6E28E6CFF0E55511179 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9CECFDF9D80D75EA602DF42E /* TimeCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculatorApp.swift; sourceTree = "<group>"; };
 		B9BDA5BAA669442DD308C8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C62090A62B0EF4EE4CAB48DF /* DurationField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationField.swift; sourceTree = "<group>"; };
+		C71B7AE6915BB5FDA39D102C /* PrintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintModel.swift; sourceTree = "<group>"; };
+		D273CF4487C605A8DA8E3861 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 		F0A56AF55FCEA7096C759426 /* TimeCalculatorKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeCalculatorKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -78,7 +84,10 @@
 			children = (
 				B9BDA5BAA669442DD308C8C8 /* Assets.xcassets */,
 				405F411FCFD5006DEB264956 /* ContentView.swift */,
+				C62090A62B0EF4EE4CAB48DF /* DurationField.swift */,
 				7741A6E28E6CFF0E55511179 /* Info.plist */,
+				D273CF4487C605A8DA8E3861 /* MenuBarView.swift */,
+				C71B7AE6915BB5FDA39D102C /* PrintModel.swift */,
 				27248B37561A0338A1CFF24D /* TimeCalculator.entitlements */,
 				9CECFDF9D80D75EA602DF42E /* TimeCalculatorApp.swift */,
 			);
@@ -211,6 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				422AC31417F0D09DA0A2669D /* ContentView.swift in Sources */,
+				39A6EF82F9207F74F1FD3D8A /* DurationField.swift in Sources */,
+				175E28B3214E75B535C7592F /* MenuBarView.swift in Sources */,
+				FADF9FEE2C3BF7AD74006BCE /* PrintModel.swift in Sources */,
 				323F0A391BE2A1CCB9F5BEAB /* TimeCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
