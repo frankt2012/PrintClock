@@ -56,9 +56,9 @@ brew install --cask printclock
 
 Homebrew asks you to trust third-party taps once before installing.
 
-PrintClock requires macOS 14 Sonoma or later. The build is signed for local
-development and is not notarized, so on first launch right-click the app in
-Applications and choose **Open**.
+PrintClock requires macOS 14 Sonoma or later. DMG installs are not notarized,
+so on first launch right-click the app in Applications and choose **Open**. The
+Homebrew cask removes the download quarantine for you.
 
 ## Build
 
