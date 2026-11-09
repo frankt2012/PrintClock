@@ -20,7 +20,7 @@ struct SettingsView: View {
                     }
                 }
 
-                Text("Menu bar only hides the Dock icon. Dock only removes the menu bar item.")
+                Text("Menu bar only hides the Dock icon. If you use a menu bar manager such as Thaw, keep PrintClock visible there.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
