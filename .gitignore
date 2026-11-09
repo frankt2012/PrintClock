@@ -4,6 +4,7 @@ build_release/
 dist/
 DerivedData/
 .build/
+*.dmg
 *.xcuserstate
 xcuserdata/
 *.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist

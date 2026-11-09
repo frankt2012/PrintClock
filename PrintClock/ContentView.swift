@@ -1,3 +1,4 @@
+import AppKit
 import SwiftUI
 import PrintClockKit
 
@@ -43,25 +44,11 @@ struct ContentView: View {
 
     private var header: some View {
         HStack(spacing: 13) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 13, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.30, green: 0.27, blue: 0.78),
-                                Color(red: 0.55, green: 0.36, blue: 0.90)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-
-                Image(systemName: "clock.badge.checkmark")
-                    .font(.system(size: 23, weight: .semibold))
-                    .foregroundStyle(.white)
-            }
-            .frame(width: 46, height: 46)
-            .shadow(color: Color.accentColor.opacity(0.24), radius: 8, y: 3)
+            Image(nsImage: NSApp.applicationIconImage)
+                .resizable()
+                .interpolation(.high)
+                .frame(width: 46, height: 46)
+                .shadow(color: .black.opacity(0.18), radius: 6, y: 3)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text("PrintClock")

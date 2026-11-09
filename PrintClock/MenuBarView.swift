@@ -24,24 +24,10 @@ struct MenuBarView: View {
 
     private var header: some View {
         HStack(spacing: 8) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 8, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(red: 0.30, green: 0.27, blue: 0.78),
-                                Color(red: 0.55, green: 0.36, blue: 0.90)
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                    )
-
-                Image(systemName: "clock.badge.checkmark")
-                    .font(.system(size: 12, weight: .semibold))
-                    .foregroundStyle(.white)
-            }
-            .frame(width: 26, height: 26)
+            Image(nsImage: NSApp.applicationIconImage)
+                .resizable()
+                .interpolation(.high)
+                .frame(width: 26, height: 26)
 
             Text("PrintClock")
                 .font(.headline)

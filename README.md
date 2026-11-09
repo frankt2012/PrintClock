@@ -42,6 +42,21 @@ The app adds a clock-with-check icon to the menu bar. If you use a menu bar
 manager such as Thaw, make sure the PrintClock item is in the visible
 section.
 
+## Install
+
+Download the latest DMG from the
+[releases page](https://github.com/frankt2012/PrintClock/releases/latest), or
+install with Homebrew:
+
+```sh
+brew tap frankt2012/printclock
+brew install --cask printclock
+```
+
+PrintClock requires macOS 14 Sonoma or later. The build is signed for local
+development and is not notarized, so on first launch right-click the app in
+Applications and choose **Open**.
+
 ## Build
 
 The project is generated with [XcodeGen](https://github.com/yonaskolb/XcodeGen).
