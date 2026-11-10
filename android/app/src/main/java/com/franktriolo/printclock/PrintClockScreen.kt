@@ -3,6 +3,7 @@ package com.franktriolo.printclock
 import android.Manifest
 import android.content.pm.PackageManager
 import android.os.Build
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
@@ -124,6 +125,20 @@ fun PrintClockScreen(viewModel: PrintClockViewModel = viewModel()) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(horizontal = 2.dp)
             )
+            TextButton(
+                onClick = {
+                    if (!PrintWidgetUpdater.requestPin(context)) {
+                        Toast.makeText(
+                            context,
+                            "Widget pinning isn't supported by this launcher.",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                },
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            ) {
+                Text("Add home-screen widget")
+            }
         }
     }
 }

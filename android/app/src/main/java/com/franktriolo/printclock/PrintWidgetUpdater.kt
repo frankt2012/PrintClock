@@ -10,6 +10,14 @@ import android.view.View
 import android.widget.RemoteViews
 
 object PrintWidgetUpdater {
+    fun requestPin(context: Context): Boolean {
+        val manager = AppWidgetManager.getInstance(context)
+        if (!manager.isRequestPinAppWidgetSupported) return false
+
+        val provider = ComponentName(context, PrintClockWidgetProvider::class.java)
+        return manager.requestPinAppWidget(provider, null, null)
+    }
+
     fun update(context: Context) {
         val manager = AppWidgetManager.getInstance(context)
         val ids = manager.getAppWidgetIds(

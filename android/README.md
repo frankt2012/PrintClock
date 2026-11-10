@@ -20,7 +20,8 @@ will finish.
 ![PrintClock home-screen widget](../docs/android-widget.png)
 
 Add the widget by long-pressing the home screen, choosing **Widgets**, then
-selecting **PrintClock**.
+selecting **PrintClock**. The app also has an **Add home-screen widget** button
+that uses Android's widget-pin flow.
 
 ## Not here yet
 
