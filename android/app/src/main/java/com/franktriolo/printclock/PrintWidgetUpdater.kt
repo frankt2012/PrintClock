@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.SystemClock
 import android.view.View
 import android.widget.RemoteViews
@@ -36,7 +37,9 @@ object PrintWidgetUpdater {
         val finished = state.isFinished(now)
 
         val views = RemoteViews(context.packageName, R.layout.printclock_widget)
-        views.setImageViewResource(R.id.widget_icon, R.drawable.app_icon)
+        BitmapFactory.decodeResource(context.resources, R.drawable.app_icon)?.let {
+            views.setImageViewBitmap(R.id.widget_icon, it)
+        }
 
         views.setTextViewText(
             R.id.widget_status,
