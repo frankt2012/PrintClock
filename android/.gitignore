@@ -5,3 +5,6 @@ local.properties
 *.aab
 *.iml
 .DS_Store
+key.properties
+*.jks
+*.keystore

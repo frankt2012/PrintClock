@@ -23,6 +23,26 @@ Add the widget by long-pressing the home screen, choosing **Widgets**, then
 selecting **PrintClock**. The app also has an **Add home-screen widget** button
 that uses Android's widget-pin flow.
 
+## Install
+
+Download `PrintClock-1.2.0.apk` from the
+[releases page](https://github.com/frankt2012/PrintClock/releases/latest) and
+install it with:
+
+```sh
+adb install PrintClock-1.2.0.apk
+```
+
+Or copy the APK to the phone and open it, allowing installs from that source.
+
+The APK is signed with PrintClock's local release key. Certificate SHA-256:
+
+```text
+EA:FC:8B:EB:F0:74:17:29:F4:A2:AE:AF:DB:BE:A0:B6:61:A5:46:12:3F:CF:C5:71:B5:9C:CD:46:F0:82:23:B1
+```
+
+It is not on Google Play. Android 8.0 or later is required.
+
 ## Not here yet
 
 This is the first Android milestone. Still to come:
@@ -31,7 +51,6 @@ This is the first Android milestone. Still to come:
 - Quick Settings tile
 - Optional finish notification toggle
 - In-app update check
-- Release signing and a published APK
 
 ## Build
 

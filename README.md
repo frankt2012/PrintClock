@@ -68,6 +68,10 @@ Kotlin and Jetpack Compose. It includes the finish-time calculator, quick
 presets, a persistent active timer, a home-screen widget with a live countdown,
 and a local finish notification.
 
+A signed APK is available on the
+[releases page](https://github.com/frankt2012/PrintClock/releases/latest). It is
+not on Google Play.
+
 ![PrintClock on Android](docs/android.png)
 
 See [android/README.md](android/README.md) for build instructions and the
